@@ -25,7 +25,7 @@ export default function InfoLayout({
     width: 2000,
     height: 1500,
     quality: 100,
-    src: "/images/background-2.png",
+    src: "/images/vines.png",
   });
   const backgroundImage = getBackgroundImage(srcSet);
 
@@ -34,7 +34,7 @@ export default function InfoLayout({
       <Navbar />
 
       <section
-        className="bg-fixed lg:bg-cover bg-top"
+        className="bg-fixed bg-cover lg:bg-cover lg:bg-top"
         style={{
           backgroundImage,
         }}

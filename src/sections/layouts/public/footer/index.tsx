@@ -9,10 +9,12 @@ export const Footer = () => {
   return (
     <footer>
       <Separator className="w-full" />
-      <div className="flex flex-row max-lg:flex-col justify-between max-lg:justify-center max-lg:items-center max-lg:space-y-5 p-5 pb-0 font-avenir tracking-tight">
+      <div className="flex flex-col justify-center lg:flex-row lg:justify-between max-lg:items-center max-lg:space-y-5 p-5 pb-0 font-avenir tracking-tight">
         {/* Self-improvement email */}
-        <div className="flex flex-col space-y-5 w-1/5 ml-10">
-          <Typography variant="h4">Self-Improvement Newsletter</Typography>
+        <div className="flex flex-col space-y-5 w-full lg:w-1/5 ml-10">
+          <Typography variant="h4">
+            Self-Improvement Newsletter (Coming Soon!)
+          </Typography>
           <Typography variant="muted">
             Subscribe to my newsletter to receive updates on new posts, courses,
             and other self-improvement content.
@@ -33,7 +35,7 @@ export const Footer = () => {
         </div>
 
         {/* Logo and social media icons */}
-        <div className="flex flex-row-reverse items-center w-1/5 max-lg:w-full pr-10">
+        <div className="flex lg:flex-row-reverse items-center w-full lg:w-1/5 pr-10">
           <Logo
             variant={"icon-only"}
             priority={false}

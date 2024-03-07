@@ -2,6 +2,8 @@ import { Logo } from "@/components/logos/logo";
 import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { paths } from "@/paths";
+import { LandingCarouselSection } from "@/sections/home/carousel";
+import { LandingCarousel } from "@/sections/home/carousel/carousel";
 import { JourneyStep } from "@/sections/home/journey/journey-step";
 import { ChevronRight } from "lucide-react";
 import { Metadata } from "next";
@@ -68,30 +70,28 @@ export default function Home() {
         <div className="flex flex-col space-y-5 w-full max-w-6xl text-center">
           <Typography variant="h2">What is life coaching?</Typography>
           <Typography>
-            Life coaching is a form of personal development that focuses on
-            helping individuals achieve their goals and aspirations. It involves
-            a client-centered approach where I work with you to identify your
-            strengths, values, and challenges, enabling you to make positive
-            changes and reach your full potential.
-          </Typography>
-
-          <Typography>
-            As a life coach, I offer a safe, non-judgmental space where you can
-            explore your thoughts and emotions, gain clarity, and develop
-            strategies to overcome obstacles. I provide support, guidance, and
-            accountability, empowering you to take control of your life and
-            create lasting change.
+            In the bustling world we navigate daily, it&apos;s easy to lose
+            sight of our goals and succumb to the overwhelming feeling of being
+            stuck. Amid this chaos, the concept of life coaching emerges as a
+            beacon of guidance, yet many remain unaware of its profound impact.
+            Life coaching transcends the simplistic comparisons to psychology or
+            mental health services; it embodies a journey of empowerment,
+            transformation, and self-discovery.
           </Typography>
 
           <div className="flex w-full justify-center pt-3">
             <Button
               asChild
-              variant={"ghost"}
-              className="text-xl font-glacial font-bold"
+              variant={"outline"}
+              className="font-glacial"
             >
-              <Link href={paths.about}>
-                Find out more about me{" "}
-                <ChevronRight className="w-5 h-5 self-center" />
+              <Link
+                href={paths.blog.post(
+                  "the-transformative-power-of-life-coaching"
+                )}
+              >
+                Read full article{" "}
+                <ChevronRight className="w-4 h-4 self-center" />
               </Link>
             </Button>
           </div>
@@ -143,10 +143,21 @@ export default function Home() {
             />
           </div>
 
-          <Button>
-            Read more about my approach{" "}
-            <ChevronRight className="w-5 h-5 self-center" />
+          <Button
+            asChild
+            variant={"default"}
+            className=""
+          >
+            <Link href={paths.about}>
+              Find out more about me{" "}
+              <ChevronRight className="w-4 h-4 self-center" />
+            </Link>
           </Button>
+        </div>
+
+        <div className="flex flex-col space-y-10 w-full max-w-6xl text-center items-center">
+          <Typography variant="h2">Reviews</Typography>
+          <LandingCarouselSection />
         </div>
       </div>
     </>

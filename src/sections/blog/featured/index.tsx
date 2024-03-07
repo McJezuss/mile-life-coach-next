@@ -8,8 +8,7 @@ import { BlogCard } from "../post-card";
 
 export const FeaturedPosts = async () => {
   const { data } = await getPosts({
-    page: 1,
-    limit: 3,
+    featured: true,
   });
 
   return (

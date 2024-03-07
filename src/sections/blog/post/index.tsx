@@ -1,5 +1,6 @@
 import { getPostBySlug } from "@/api/blog";
 import { Crumbs } from "@/components/ui/crumbs";
+import { Typography } from "@/components/ui/typography";
 import { markdownToHtml } from "@/lib/blog-utils";
 import { paths } from "@/paths";
 import { format } from "date-fns";
@@ -70,18 +71,18 @@ export const BlogPost = async ({ slug }: { slug: string }) => {
           alt={data.title}
           width={200}
           height={200}
-          className="rounded-full grayscale aspect-square object-cover"
+          className="rounded-xl aspect-square object-cover"
           sizes="(max-width: 768px) 40vw, (max-width: 1024px) 20vw, 10vw"
         />
         <div className="flex flex-col space-y-2">
-          <h1 className="font-bebas text-6xl">{data.title}</h1>
-          <p className="text-zinc-400">
+          <Typography variant="h1">{data.title}</Typography>
+          <Typography variant="muted">
             {format(new Date(data.createdAt), "eeee PP")}
-          </p>
+          </Typography>
         </div>
       </div>
       <article
-        className="min-w-full space-y-4 pt-20 font-avenir prose [&>*]:w-full"
+        className="min-w-full space-y-4 pt-20 font-fraunces prose [&>*]:w-full"
         dangerouslySetInnerHTML={{ __html: html }}
       />
     </div>

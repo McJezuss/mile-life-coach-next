@@ -49,11 +49,6 @@ export function MobileDrawer() {
               title={"Home"}
               href={paths.home}
             />
-
-            <MobileRouteItem
-              title={"Portfolio"}
-              href={paths.portfolio}
-            />
             <MobileRouteItem
               title={"About Me"}
               href={paths.about}

@@ -1,3 +1,4 @@
+import { cn } from "@/lib/utils";
 import { FC } from "react";
 
 export type TypographyVariant =
@@ -13,10 +14,15 @@ export type TypographyVariant =
 interface TypographyProps {
   children: string | string[];
   variant?: TypographyVariant;
+  className?: string;
 }
 
-export const Typography: FC<TypographyProps> = ({ children, variant }) => {
-  const globalClasses = "text-zinc-900 dark:text-white";
+export const Typography: FC<TypographyProps> = ({
+  children,
+  variant,
+  className,
+}) => {
+  const globalClasses = cn("text-zinc-900 dark:text-white", className);
 
   switch (variant) {
     case "h1":
@@ -93,7 +99,7 @@ export const Typography: FC<TypographyProps> = ({ children, variant }) => {
     case "muted":
       return (
         <p
-          className={"font-fraunces text-base text-zinc-400 dark:text-zinc-500"}
+          className={"font-fraunces text-base text-zinc-500 dark:text-zinc-500"}
         >
           {children}
         </p>

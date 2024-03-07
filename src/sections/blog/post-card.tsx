@@ -11,6 +11,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
 import { format } from "date-fns";
+import { Typography } from "@/components/ui/typography";
 
 interface BlogCardProps {
   post: Post;
@@ -29,27 +30,25 @@ export const BlogCard: FC<BlogCardProps> = ({
       className="h-full"
     >
       <Card className="h-full transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:shadow-xl duration-500 w-full min-w-[500px] max-lg:min-w-[350px]">
-        <CardHeader className="flex flex-row space-x-5 max-lg:flex-col max-lg:space-y-5 max-lg:space-x-0 max-lg:items-center max-lg:text-center">
-          <Image
-            src={post.coverImageUrl}
-            alt={post.title}
-            width={150}
-            height={50}
-            className="rounded-full grayscale aspect-square object-cover"
-            sizes={imageSizes}
-            priority={imagePriority}
-          />
-          <div className="space-y-2">
-            <CardTitle className="font-bebas text-3xl font-normal">
-              {post.title}
-            </CardTitle>
-            <CardDescription className="font-avenir text-sm">
-              {format(new Date(post.createdAt), "eeee, PP")}
-            </CardDescription>
+        <CardContent className="max-lg:text-center pt-3">
+          <div className="flex flex-row space-x-5 mb-3">
+            <Image
+              src={post.coverImageUrl}
+              alt={post.title}
+              width={150}
+              height={50}
+              className="rounded-xl aspect-square object-cover"
+              sizes={imageSizes}
+              priority={imagePriority}
+            />
+            <div className="space-y-2">
+              <Typography variant="h2">{post.title}</Typography>
+              <Typography variant="muted">
+                {format(new Date(post.createdAt), "eeee, PP")}
+              </Typography>
+            </div>
           </div>
-        </CardHeader>
-        <CardContent className="max-lg:text-center">
-          <p className="font-avenir text-base">{post.previewContent}</p>
+          <Typography variant="small">{post.previewContent}</Typography>
         </CardContent>
       </Card>
     </Link>

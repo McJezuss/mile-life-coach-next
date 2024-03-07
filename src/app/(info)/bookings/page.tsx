@@ -1,3 +1,4 @@
+import { Card, CardContent } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { Typography } from "@/components/ui/typography";
 import { paths } from "@/paths";
@@ -37,7 +38,7 @@ export default function Bookings() {
           Ready to transform your life? Let&apos;s begin.
         </Typography>
 
-        <div className="flex flex-col space-y-5 mt-5">
+        <div className="flex flex-col space-y-5 mt-5 text-center">
           <Typography>
             If you are ready to embark on your journey to empowerment and peace,
             I am here to guide you. Whether you are seeking personal
@@ -45,14 +46,66 @@ export default function Bookings() {
             overcome challenges and heal from trauma.
           </Typography>
           <Separator />
-          <Typography>I offer the following services:</Typography>
-          <ul className="list-inside">
-            <Typography variant="p">1. Life Coaching</Typography>
-            <Typography variant="p">2. Personal Development</Typography>
-            <Typography variant="p">3. Trauma Facilitation</Typography>
-            <Typography variant="p">4. Mediation</Typography>
-          </ul>
+          <Typography variant="h2">I offer the following services</Typography>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+            <Card className="flex flex-col space-y-3 text-left">
+              <CardContent className="pt-3 space-y-3">
+                <div>
+                  <Typography variant="h3">Life Coaching</Typography>
+                  <Separator />
+                </div>
+                <ul className="list-inside">
+                  <div className="flex flex-row space-x-2 items-center">
+                    <Typography variant="p">1. Life Coaching</Typography>
+                    <Typography variant="muted">(R450/h)</Typography>
+                  </div>
+                  <div className="flex flex-row space-x-2 items-center">
+                    <Typography variant="p">2. Personal Development</Typography>
+                    <Typography variant="muted">(R450/h)</Typography>
+                  </div>
+                  <div className="flex flex-row space-x-2 items-center">
+                    <Typography variant="p">3. Trauma Facilitation</Typography>
+                    <Typography variant="muted">(R300/h)</Typography>
+                  </div>
+                  <div className="flex flex-row space-x-2 items-center">
+                    <Typography variant="p">4. Mediation</Typography>
+                    <Typography variant="muted">(R450/h)</Typography>
+                  </div>
+                </ul>
+              </CardContent>
+            </Card>
+
+            <Card className="flex flex-col text-left">
+              <CardContent className="pt-3 space-y-3">
+                <div>
+                  <Typography variant="h3">
+                    Art Therapy (Cape Town only)
+                  </Typography>
+                  <Separator />
+                </div>
+                <div>
+                  <ul className="list-inside">
+                    <div className="flex flex-row space-x-2 items-center">
+                      <Typography variant="p">1. Art Workshops</Typography>
+                      <Typography variant="muted">(~R290/p)</Typography>
+                    </div>
+                  </ul>
+                </div>
+                <Typography
+                  variant="muted"
+                  className="mt-3"
+                >
+                  This is a passion project I have been working on where I
+                  facilitate art therapy workshops for children and adults. I
+                  believe that art is a powerful tool for healing and
+                  self-expression. If you are interested in attending a
+                  workshop, please contact me for more information.
+                </Typography>
+              </CardContent>
+            </Card>
+          </div>
           <Separator />
+          <Typography variant="h2">Contact me here</Typography>
           <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-5">
             <div className="flex flex-col space-y-2">
               <Typography>Instagram (Preferred)</Typography>
@@ -62,6 +115,13 @@ export default function Bookings() {
                 className="text-zinc-700 hover:text-zinc-800 cursor-pointer"
               >
                 <Typography variant="small">@mileklaasee_coach_</Typography>
+              </a>
+              <a
+                href={"https://www.instagram.com/art.inthe.garden/"}
+                target="_blank"
+                className="text-zinc-700 hover:text-zinc-800 cursor-pointer"
+              >
+                <Typography variant="small">@art.inthe.garden</Typography>
               </a>
             </div>
             <div className="flex flex-col space-y-1">

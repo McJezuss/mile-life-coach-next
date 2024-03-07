@@ -11,21 +11,22 @@ export interface GetAllPostsResponse {
 export interface GetAllPostsParams {
   page?: number
   limit?: number
+  featured?: boolean
+  tags?: string[]
 }
 
-export const getPosts = async ({ limit, page }: GetAllPostsParams = { limit: 4 }): Promise<GetAllPostsResponse> => {
+export const getPosts = async ({ limit, page, featured, tags }: GetAllPostsParams = { limit: 4 }): Promise<GetAllPostsResponse> => {
   const data = await fetchWithHeaders<GetAllPostsResponse>(
     API_ROUTES.blogPosts({
       limit: limit,
       page: page,
+      featured: featured,
+      tags: tags
     }),
     {
-      next: {
-        // 1 day
-        revalidate: 86400
-      }
+      cache: "reload",
     }
-  );
+  )
 
   return data;
 };

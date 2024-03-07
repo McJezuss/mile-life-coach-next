@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Typography } from "@/components/ui/typography";
 import { paths } from "@/paths";
 import { Post } from "@/types/blog";
 import { format } from "date-fns";
@@ -20,15 +21,17 @@ export const FeaturedPost: FC<FeaturedPostProps> = ({ post }) => {
           alt={post.title}
           width={600}
           height={600}
-          className="rounded-full grayscale m-auto aspect-square object-cover max-lg:w-96 max-lg:h-96"
+          className="rounded-xl m-auto aspect-square object-cover max-lg:w-96 max-lg:h-96"
           priority
           sizes="(max-width: 768px) 80vw, (max-width: 1024px) 50vw (max-width: 1200px) 30vw, 40vw"
         />
 
         <div className="flex flex-col space-y-5 font-avenir text-lg justify-center items-center text-center tracking-tight">
-          <h1 className="font-bebas text-4xl">{post.title}</h1>
-          <p>{format(new Date(post.createdAt), "eeee PP")}</p>
-          <p>{post.previewContent}</p>
+          <Typography variant="h1">{post.title}</Typography>
+          <Typography variant="muted">
+            {format(new Date(post.createdAt), "eeee PP")}
+          </Typography>
+          <Typography variant="p">{post.previewContent}</Typography>
           <Button
             asChild
             variant={"default"}
