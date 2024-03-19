@@ -39,9 +39,7 @@ export default function InfoLayout({
           backgroundImage,
         }}
       >
-        <div className="p-5 lg:pt-0 backdrop-blur-sm tracking-tight h-full">
-          {children}
-        </div>
+        <div className="p-5 lg:pt-0 tracking-tight h-full">{children}</div>
       </section>
 
       <Footer />
