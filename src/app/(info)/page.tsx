@@ -3,12 +3,11 @@ import { Button } from "@/components/ui/button";
 import { Typography } from "@/components/ui/typography";
 import { paths } from "@/paths";
 import { LandingCarouselSection } from "@/sections/home/carousel";
-import { LandingCarousel } from "@/sections/home/carousel/carousel";
 import { JourneyStep } from "@/sections/home/journey/journey-step";
 import { ChevronRight } from "lucide-react";
 import { Metadata } from "next";
 import Link from "next/link";
-import { TattooParlor, WithContext } from "schema-dts";
+import { HealthAndBeautyBusiness, WithContext } from "schema-dts";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
@@ -21,35 +20,30 @@ export const generateMetadata = async (): Promise<Metadata> => {
 
 export default function Home() {
   // Schema org
-  // TODO
-  const jsonLd: WithContext<TattooParlor> = {
+  const jsonLd: WithContext<HealthAndBeautyBusiness> = {
     "@context": "https://schema.org",
-    "@type": "TattooParlor",
-    name: "Stöckel Tattoos",
+    "@type": "HealthAndBeautyBusiness",
     image: `${process.env.WEBSITE_URL}/logos/logo-og.png`,
-    priceRange: "R650 - R3600",
-    employee: {
+    priceRange: "R650 - R800",
+    name: "Milé Klaasee Life Coach & Trauma Facilitator",
+    founder: {
       "@type": "Person",
-      name: "Bianca Stöckel",
-      jobTitle: "Tattoo Artist",
+      name: "Milé Klaasee",
+      jobTitle: "Life Coach & Trauma Facilitator",
       url: `${process.env.WEBSITE_URL}${paths.about}`,
     },
-    telephone: "+27798782205",
-    email: "bianca.stockel@gmail.com",
+    telephone: "+27713332987",
+    email: "mklaasee1234@gmail.com@gmail.com",
     url: process.env.WEBSITE_URL,
     address: {
       "@type": "PostalAddress",
-      streetAddress: "645 Klipbank St",
-      addressLocality: "Pretoria",
-      addressRegion: "Gauteng",
-      postalCode: "0153",
+      streetAddress: "Corner Main Road en Campground Road",
+      addressLocality: "Claremont",
+      addressRegion: "Cape Town",
+      postalCode: "7708",
       addressCountry: "ZA",
     },
-    sameAs: [
-      "https://www.instagram.com/stockel.tattoos/",
-      "https://www.facebook.com/humblebtattoos/",
-      "https://www.tiktok.com/@stockel.tattoos",
-    ],
+    sameAs: ["https://www.instagram.com/mileklaasee_coach_/"],
   };
 
   return (

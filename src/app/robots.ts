@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/private/',
     },
-    sitemap: 'https://stockel-tattoos.co.za/sitemap.xml',
+    sitemap: 'https://mileklaaseecoach.co.za/sitemap.xml',
   }
 }

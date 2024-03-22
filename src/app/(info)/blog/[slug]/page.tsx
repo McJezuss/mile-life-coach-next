@@ -16,20 +16,29 @@ export const generateMetadata = async ({
 }: Props): Promise<Metadata> => {
   const { data } = await getPostBySlug(slug);
 
-  if (!data) return { title: "Blog | Stöckel Tattoos" };
+  if (!data)
+    return { title: "Blog | Milé Klaasee - Life Coach & Trauma Facilitator" };
 
   return {
-    title: `${data.title} | Stöckel Tattoos`,
-    authors: [{ name: "Stöckel Tattoos" }, { name: "Bianca Stöckel" }],
+    title: `${data.title} | Milé Klaasee - Life Coach & Trauma Facilitator`,
+    authors: [
+      { name: "Milé Klaasee - Life Coach & Trauma Facilitator" },
+      { name: "Milé Klaasee" },
+    ],
     description: data.previewContent,
-    keywords: [...data.tags, "tattoo blog south africa", "tattoo blog"],
+    keywords: [
+      ...data.tags,
+      "life coach south africa",
+      "life coach blog",
+      "life coach",
+    ],
     metadataBase: new URL(process.env.S3_ENDPOINT || ""),
     openGraph: {
       countryName: "South Africa",
       type: "article",
       authors: [
-        "Stöckel Tattoos",
-        "Bianca Stöckel",
+        "Milé Klaasee - Life Coach & Trauma Facilitator",
+        "Milé Klaasee",
         `${process.env.WEBSITE_URL}${paths.about}`,
       ],
       description: data.previewContent,
@@ -38,18 +47,23 @@ export const generateMetadata = async ({
           url: data.coverImageUrl,
           width: 400,
           height: 400,
-          alt: "Artistic black and grey blog post cover image",
+          alt: "Feel good image",
         },
       ],
       publishedTime: data.createdAt,
-      tags: [...data.tags, "tattoo blog south africa", "tattoo blog"],
+      tags: [
+        ...data.tags,
+        "life coach south africa",
+        "life coach blog",
+        "life coach",
+      ],
       title: data.title,
-      siteName: "Stöckel Tattoos",
+      siteName: "Milé Klaasee - Life Coach & Trauma Facilitator",
       url: `${process.env.WEBSITE_URL}${paths.blog.post(slug)}`,
       locale: "en_ZA",
     },
     robots: "index, follow",
-    applicationName: "Stöckel Tattoos",
+    applicationName: "Milé Klaasee - Life Coach & Trauma Facilitator",
   };
 };
 

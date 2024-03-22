@@ -8,7 +8,7 @@ import { WithContext, HealthAndBeautyBusiness } from "schema-dts";
 export const metadata: Metadata = {
   title: "Bookings | Milé Klaasee - Life Coach & Trauma Facilitator",
   description:
-    "Embark on your tattoo journey with Bianca Stöckel. Whether it's your first tattoo or an addition to your collection, our Bookings Page makes it easy to start the conversation. Share your ideas, preferences, and inspiration directly with Bianca via WhatsApp for a personalized consultation. Note: Appointments are required, ensuring each client receives dedicated attention and care. Ready to transform your vision into ink? Let's begin.",
+    "Discover transformative growth with our Cape Town-based life coach and trauma facilitator. Specializing in personal development, healing, and mediation, we guide you towards overcoming challenges, healing from trauma, and achieving harmony. Embrace your journey to empowerment and peace.",
 };
 
 export default function Bookings() {

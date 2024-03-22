@@ -7,9 +7,9 @@ import { Suspense } from "react";
 
 export const generateMetadata = async (): Promise<Metadata> => {
   return {
-    title: "Blog Posts | Stöckel Tattoos",
+    title: "Blog Posts | Milé Klaasee - Life Coach & Trauma Facilitator",
     description:
-      "Dive into the heart of tattoo culture with our blog, a treasure trove of articles ranging from detailed aftercare instructions to preparing for your tattoo appointment, and even a touch of humor to lighten the mood. Each post is crafted to inform, inspire, and entertain, offering insights into all things tattoos. Whether you're a tattoo aficionado or a curious newbie, our blog is your go-to source for the latest tips, trends, and tales from the world of tattooing. Join us in exploring the art and soul of tattoos.",
+      "Discover transformative growth with our Cape Town-based life coach and trauma facilitator. Specializing in personal development, healing, and mediation, we guide you towards overcoming challenges, healing from trauma, and achieving harmony. Embrace your journey to empowerment and peace.",
   };
 };
 

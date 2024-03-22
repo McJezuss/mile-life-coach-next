@@ -6,7 +6,7 @@ import { paths } from "@/paths";
 import { format } from "date-fns";
 import Image from "next/image";
 import { redirect } from "next/navigation";
-import { WithContext, Blog } from "schema-dts";
+import { Blog, WithContext } from "schema-dts";
 
 export const BlogPost = async ({ slug }: { slug: string }) => {
   const { data } = await getPostBySlug(slug);
@@ -32,13 +32,13 @@ export const BlogPost = async ({ slug }: { slug: string }) => {
     description: data.previewContent,
     author: {
       "@type": "Person",
-      name: "Bianca Stöckel",
+      name: "Milé Klaasee",
     },
     dateModified: new Date().toLocaleString(),
     datePublished: data.createdAt,
     publisher: {
-      "@type": "TattooParlor",
-      name: "Stöckel Tattoos",
+      "@type": "HealthAndBeautyBusiness",
+      name: "Milé Klaasee Life Coach & Trauma Facilitator",
       url: process.env.WEBSITE_URL,
       logo: {
         "@type": "ImageObject",

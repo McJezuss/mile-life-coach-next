@@ -9,20 +9,20 @@ import Me from "@/../public/images/me.jpg";
 import { Typography } from "@/components/ui/typography";
 
 export const metadata: Metadata = {
-  title: "About Me | Stöckel Tattoos",
+  title: "Blog | Milé Klaasee - Life Coach & Trauma Facilitator",
   description:
-    "Meet Bianca Stöckel, a premier tattoo artist in Pretoria East, South Africa, specializing in illustrative surrealism and realism with a unique twist of pepper shading and blackwork. Ready to elevate your tattoo experience? Contact Bianca today for a journey tailored to your story.",
+    "Discover transformative growth with our Cape Town-based life coach and trauma facilitator. Specializing in personal development, healing, and mediation, we guide you towards overcoming challenges, healing from trauma, and achieving harmony. Embrace your journey to empowerment and peace.",
 };
 
 export default function About() {
   const jsonLd: WithContext<Person> = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Bianca Stöckel",
-    jobTitle: "Tattoo Artist",
+    name: "Milé Klaasee",
+    jobTitle: "Life Coach & Trauma Facilitator",
     knowsLanguage: ["English", "Afrikaans"],
-    telephone: "+27 79 878 2205",
-    email: "bianca.stockel@gmail.com",
+    telephone: "+27713332987",
+    email: "mklaasee1234@gmail.com@gmail.com",
     url: `${process.env.WEBSITE_URL}${paths.about}`,
     image: `${process.env.WEBSITE_URL}/images/me.webp`,
     address: {
@@ -33,11 +33,7 @@ export default function About() {
       postalCode: "0153",
       addressCountry: "ZA",
     },
-    sameAs: [
-      "https://www.instagram.com/stockel.tattoos/",
-      "https://www.facebook.com/humblebtattoos/",
-      "https://www.tiktok.com/@stockel.tattoos",
-    ],
+    sameAs: ["https://www.instagram.com/mileklaasee_coach_/"],
   };
 
   return (

@@ -29,7 +29,7 @@ export const Logo: FC<LogoProps> = ({
           ? IconLogo
           : HorizontalFullLogo
       }
-      alt="Stockel Tattoos Logo"
+      alt="Mile Klaasee Life Coach Logo"
       className={className}
       priority={priority}
       sizes={sizes}
