@@ -29,7 +29,7 @@ export const BlogCard: FC<BlogCardProps> = ({
       href={paths.blog.post(post.slug)}
       className="h-full"
     >
-      <Card className="h-full transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:shadow-xl duration-500 w-full min-w-[500px] max-lg:min-w-[350px]">
+      <Card className="h-full transition ease-in-out hover:-translate-y-1 hover:scale-105 hover:shadow-xl duration-500 w-full min-w-[500px] max-lg:min-w-[300px]">
         <CardContent className="max-lg:text-center pt-3">
           <div className="flex flex-row space-x-5 mb-3">
             <Image
