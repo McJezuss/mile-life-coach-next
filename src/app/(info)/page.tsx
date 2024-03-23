@@ -56,7 +56,7 @@ export default function Home() {
         {/* Landing */}
         <Logo
           variant={"vertical"}
-          className="max-w-[1000px] max-md:max-w-[400px] md:max-w-[600px] pt-28"
+          className="max-w-[1000px] max-md:max-w-[300px] md:max-w-[600px] pt-28"
           sizes="(max-width: 768px) 60vw, (max-width: 1200px) 50vw"
         />
 
@@ -149,7 +149,7 @@ export default function Home() {
           </Button>
         </div>
 
-        <div className="flex flex-col space-y-10 w-full max-w-6xl text-center items-center">
+        <div className="flex flex-col space-y-10 text-center items-center">
           <Typography variant="h2">Reviews</Typography>
           <LandingCarouselSection />
         </div>

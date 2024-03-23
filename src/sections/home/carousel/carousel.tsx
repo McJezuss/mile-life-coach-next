@@ -54,7 +54,7 @@ export function LandingCarousel({
       <Carousel
         setApi={setApi}
         plugins={[plugin.current]}
-        className="w-full max-md:max-w-sm lg:max-w-6xl"
+        className="max-md:max-w-[300px] lg:max-w-6xl m-auto"
         onMouseEnter={plugin.current.stop}
         onMouseLeave={plugin.current.reset}
       >
@@ -76,7 +76,7 @@ export function LandingCarousel({
         <CarouselPrevious className="hidden lg:flex" />
         <CarouselNext className="hidden lg:flex" />
       </Carousel>
-      <div className="flex flex-row space-x-5 w-full justify-center items-center pt-5">
+      <div className="max-lg:grid max-lg:grid-cols-5 max-lg:gap-5 lg:flex lg:flex-row lg:space-x-5 w-full justify-center items-center pt-5">
         {Array.from({ length: count }).map((_, index) => (
           <Badge
             key={index}

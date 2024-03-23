@@ -47,7 +47,7 @@ export default function About() {
           src={Me}
           alt="Milé Klaasee"
           priority
-          className={`rounded-lg m-auto max-lg:max-w-[350px] md:max-w-[500px] max-w-[600px]`}
+          className={`rounded-lg m-auto max-md:max-w-[300px] md:max-w-[500px] max-w-[600px]`}
           sizes="(max-width: 768px) 100vw, (max-width: 1024px): 0vw, (max-width: 1200px) 30vw"
         />
 
@@ -134,7 +134,7 @@ export default function About() {
           >
             <Link
               href={paths.bookings}
-              className="flex items-center space-x-2 w-96 m-auto"
+              className="flex items-center space-x-2 w-96 max-lg:w-48 m-auto"
             >
               <Typography>Contact Me</Typography>
               <ChevronRight className="w-5 h-5" />

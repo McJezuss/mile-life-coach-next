@@ -24,7 +24,10 @@ export const getPosts = async ({ limit, page, featured, tags }: GetAllPostsParam
       tags: tags
     }),
     {
-      cache: "reload",
+      next: {
+        // 1 day
+        revalidate: 86400
+      }
     }
   )
 
