@@ -81,7 +81,7 @@ export default function Home() {
             >
               <Link
                 href={paths.blog.post(
-                  "the-transformative-power-of-life-coaching"
+                  "the-transformative-power-of-life-coaching-unlocking-your-potential"
                 )}
               >
                 Read full article{" "}
