@@ -34,7 +34,7 @@ export default function Bookings() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="flex flex-col justify-center items-center pt-20 max-w-4xl m-auto pb-20">
-        <Typography variant="h1">
+        <Typography variant="h2">
           Ready to transform your life? Let&apos;s begin.
         </Typography>
 
@@ -46,7 +46,7 @@ export default function Bookings() {
             overcome challenges and heal from trauma.
           </Typography>
           <Separator />
-          <Typography variant="h2">I offer the following services</Typography>
+          <Typography variant="h3">I offer the following services</Typography>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
             <Card className="flex flex-col space-y-3 text-left">
               <CardContent className="pt-3 space-y-3">
