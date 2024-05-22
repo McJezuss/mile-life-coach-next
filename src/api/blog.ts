@@ -25,8 +25,8 @@ export const getPosts = async ({ limit, page, featured, tags }: GetAllPostsParam
     }),
     {
       next: {
-        // 1 day
-        revalidate: 86400
+        // half a day
+        revalidate: 43200
       }
     }
   )
