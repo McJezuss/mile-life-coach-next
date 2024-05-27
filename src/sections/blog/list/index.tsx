@@ -7,6 +7,8 @@ export const BlogList = async ({ currentPage }: { currentPage: number }) => {
     page: currentPage,
   });
 
+  console.log(data, numberOfPages);
+
   return (
     <div className="space-y-10">
       <div className="grid grid-cols-2 max-lg:grid-cols-1 gap-5">

@@ -30,7 +30,7 @@ export default function InfoLayout({
   const backgroundImage = getBackgroundImage(srcSet);
 
   return (
-    <main className="bg-isabelline">
+    <main className="bg-isabelline min-h-screen">
       <Navbar />
 
       <section
@@ -39,7 +39,9 @@ export default function InfoLayout({
           backgroundImage,
         }}
       >
-        <div className="p-5 lg:pt-0 tracking-tight h-full">{children}</div>
+        <div className="p-5 lg:pt-0 tracking-tight h-full lg:min-h-[800px]">
+          {children}
+        </div>
       </section>
 
       <Footer />
