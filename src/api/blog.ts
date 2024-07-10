@@ -24,10 +24,7 @@ export const getPosts = async ({ limit, page, featured, tags }: GetAllPostsParam
       tags: tags
     }),
     {
-      next: {
-        // 1 day
-        revalidate: 86400
-      }
+      cache: "no-cache"
     }
   )
 
@@ -42,10 +39,7 @@ export const getPostBySlug = async (slug: string): Promise<GetPostResponse> => {
   const data = await fetchWithHeaders<GetPostResponse>(
     API_ROUTES.blogPosts({ slug }),
     {
-      next: {
-        // 1 day
-        revalidate: 86400
-      }
+      cache: "no-cache"
     }
   );
 
