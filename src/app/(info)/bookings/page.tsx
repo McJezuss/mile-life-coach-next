@@ -100,7 +100,7 @@ export default function Bookings() {
                       specific career-related goals.
                     </li>
                   </li>
-                  <div className="flex flex-col space-y-2">
+                  <div className="flex flex-col space-y-2 pt-2">
                     <div className="flex flex-row space-x-2 items-center">
                       <Typography variant="p">2. Trauma Counselling</Typography>
                     </div>
