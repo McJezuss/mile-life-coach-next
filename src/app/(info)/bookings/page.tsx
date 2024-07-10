@@ -105,7 +105,7 @@ export default function Bookings() {
                       <Typography variant="p">2. Trauma Counselling</Typography>
                     </div>
                     <li className="pl-3 text-base font-fraunces">
-                      <strong>Individual Therapy Sessions (R300/h): </strong>
+                      <strong>Individual Therapy Sessions (R350/h): </strong>
                       One-on-one counseling tailored to your specific trauma and
                       needs.
                     </li>
