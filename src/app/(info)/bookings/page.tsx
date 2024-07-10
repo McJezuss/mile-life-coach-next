@@ -112,7 +112,7 @@ export default function Bookings() {
                       needs.
                     </li>
                     <li className="pl-3 text-base font-fraunces">
-                      <strong>Group Therapy (R550/h): </strong>
+                      <strong>Group Therapy (R700/h): </strong>
                       Providing a supportive environment where clients with
                       similar experiences can share and learn from each other.
                     </li>
