@@ -12,7 +12,12 @@ export type TypographyVariant =
   | "muted";
 
 interface TypographyProps {
-  children: string | string[];
+  children:
+    | string
+    | string[]
+    | JSX.Element
+    | JSX.Element[]
+    | (string | JSX.Element)[];
   variant?: TypographyVariant;
   className?: string;
 }
@@ -28,10 +33,10 @@ export const Typography: FC<TypographyProps> = ({
     case "h1":
       return (
         <h1
-          className={
-            "font-glacial scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl" +
+          className={cn(
+            "font-glacial scroll-m-20 text-3xl font-extrabold tracking-tight lg:text-5xl",
             globalClasses
-          }
+          )}
         >
           {children}
         </h1>
@@ -39,10 +44,10 @@ export const Typography: FC<TypographyProps> = ({
     case "h2":
       return (
         <h2
-          className={
-            "font-glacial scroll-m-20 pb-2 text-3xl font-semibold tracking-tight first:mt-0" +
+          className={cn(
+            "font-glacial scroll-m-20 pb-2 text-2xl lg:text-3xl font-semibold tracking-tight first:mt-0",
             globalClasses
-          }
+          )}
         >
           {children}
         </h2>
@@ -50,10 +55,10 @@ export const Typography: FC<TypographyProps> = ({
     case "h3":
       return (
         <h3
-          className={
-            "font-glacial scroll-m-20 text-2xl font-semibold tracking-tight" +
+          className={cn(
+            "font-glacial scroll-m-20 text-xl lg:text-2xl font-semibold tracking-tight",
             globalClasses
-          }
+          )}
         >
           {children}
         </h3>
@@ -61,10 +66,10 @@ export const Typography: FC<TypographyProps> = ({
     case "h4":
       return (
         <h4
-          className={
-            "font-glacial scroll-m-20 text-xl font-semibold tracking-tight" +
+          className={cn(
+            "font-glacial scroll-m-20 text-lg lg:text-xl font-semibold tracking-tight",
             globalClasses
-          }
+          )}
         >
           {children}
         </h4>
@@ -72,26 +77,32 @@ export const Typography: FC<TypographyProps> = ({
     case "p":
       return (
         <p
-          className={
-            "font-fraunces text-xl leading-7 [&:not(:first-child)]:mt-6" +
+          className={cn(
+            "font-fraunces text-lg lg:text-xl leading-7 [&:not(:first-child)]:mt-6",
             globalClasses
-          }
+          )}
         >
           {children}
         </p>
       );
     case "large":
       return (
-        <div className={"font-fraunces text-2xl font-semibold" + globalClasses}>
+        <div
+          className={cn(
+            "font-fraunces text-xl lg:text-2xl font-semibold",
+            globalClasses
+          )}
+        >
           {children}
         </div>
       );
     case "small":
       return (
         <small
-          className={
-            "font-fraunces text-base font-medium leading-none" + globalClasses
-          }
+          className={cn(
+            "font-fraunces text-sm lg:text-base font-medium leading-none",
+            globalClasses
+          )}
         >
           {children}
         </small>
@@ -99,21 +110,15 @@ export const Typography: FC<TypographyProps> = ({
     case "muted":
       return (
         <p
-          className={"font-fraunces text-base text-zinc-500 dark:text-zinc-500"}
+          className={cn(
+            "font-fraunces text-sm lg:text-base text-zinc-500 dark:text-zinc-500",
+            globalClasses
+          )}
         >
           {children}
         </p>
       );
     default:
-      return (
-        <p
-          className={
-            "font-fraunces text-xl leading-7 [&:not(:first-child)]:mt-6" +
-            globalClasses
-          }
-        >
-          {children}
-        </p>
-      );
+      return <Typography variant="p">{children}</Typography>;
   }
 };

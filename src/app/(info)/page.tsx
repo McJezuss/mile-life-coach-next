@@ -96,42 +96,42 @@ export default function Home() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <JourneyStep
               step="01"
-              title="Understanding your needs"
-              description="We have a discussion around 3 aspects - your relationship with yourself, your relationship with others, and your relationship with the world. We then decide together on what we will focus on."
+              title="Understanding Your Needs"
+              description="We have a discussion around 3 aspects - your relationship with yourself, your relationship with others, and your relationship with the world. We then decide together on what we will focus on - this focus can be adjusted as we go along."
               circleColor="bg-ash-gray/30"
             />
 
             <JourneyStep
               step="02"
-              title="Narrative & self-observation"
-              description="I will present you with a narrative/metaphor relating to your ideal self, and we will work together to achieve this. Following that, I will offer you a self-obeservation assist to assist us in understanding some of your behavioral and thought patterns."
+              title="Narrative & Self-Observation"
+              description="I will present you with a narrative/metaphor relating to your ideal self, and we will work together to achieve this. Following that, I will offer you a self-observation to assist us in understanding some of your behavioral and thought patterns."
               circleColor="bg-wenge/30"
             />
 
             <JourneyStep
               step="03"
-              title="Follow-up sessions & accountability"
+              title="Follow-Up Sessions & Accountability"
               description="I am your accountability partner throughout this journey. We will use these sessions to discuss what came up in your self-observation and track the progress (mindset shifts)."
               circleColor="bg-pale-dogwood/30"
             />
 
             <JourneyStep
               step="04"
-              title="Practices & implementation of tools"
-              description="When you become aware of patterns and mindset shifts, we will move on to practices. A practice is a practical tool you need to implement in your daily life, eg. noticing when you feel a certain emotion."
+              title="Practices & Implementation of Tools"
+              description="When you become aware of patterns and mindset shifts, we will move on to practices. A practice is a practical tool you need to implement in your daily life, for instance, noticing when you feel a certain emotionand immediately implementing a practice to interrupt old pattern."
               circleColor="bg-sunglow/30"
             />
 
             <JourneyStep
               step="05"
-              title="Exercises to improve self-observation"
-              description="To further improve your self-observation and development, we will also implement exercises. An exercise is a once-off activity you need to do eg. watch a TED talk."
+              title="Exercises to Improve Self-Observation"
+              description="To further improve your self-observation and development, we will also implement exercises. An exercise is a once-off activity you need to do, for instance, watch a TED talk or read a prescribed book/article."
               circleColor="bg-ash-gray/30"
             />
 
             <JourneyStep
               step="06"
-              title="Summarisation & future challenges"
+              title="Summarisation & Future Challenges"
               description="Sessions aren't limited and can go over the allocated time. At the end, we summarise what you have learned and the skills/tools you have acquired to take on future challenges."
               circleColor="bg-pale-dogwood/30"
             />
