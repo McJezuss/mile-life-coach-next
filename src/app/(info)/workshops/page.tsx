@@ -68,9 +68,13 @@ export default function Workshops() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="flex flex-col justify-center items-center pt-20 max-w-4xl m-auto pb-20">
-        <Typography variant="h2">
-          Reconnect the Disconnect - From Chaos to Clarity
+        <Typography
+          variant="h1"
+          className="pb-2"
+        >
+          Reconnect the Disconnect
         </Typography>
+        <Typography variant="h2">From Chaos to Mental Clarity</Typography>
 
         <div className="flex flex-col space-y-8 mt-5">
           <Typography>
@@ -112,8 +116,8 @@ export default function Workshops() {
             <li className="pl-3 text-base font-fraunces">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3308.6266801342185!2d18.462426475713254!3d-33.97643367318573!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzPCsDU4JzM1LjIiUyAxOMKwMjcnNTQuMCJF!5e0!3m2!1sen!2sza!4v1723463351030!5m2!1sen!2sza"
-                width="600"
-                height="450"
+                width="300"
+                height="200"
                 className="border-0 w-full"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
