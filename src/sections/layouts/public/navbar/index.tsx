@@ -39,6 +39,11 @@ export const Navbar = () => {
             title={"Blog"}
             href={paths.blog.index}
           />
+          <Sprout className="w-5 h-5 text-ash-gray" />
+          <RouteItem
+            title={"Workshops"}
+            href={paths.workshops}
+          />
         </ul>
       </div>
     </nav>

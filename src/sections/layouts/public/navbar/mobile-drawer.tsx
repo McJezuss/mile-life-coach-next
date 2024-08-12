@@ -61,6 +61,10 @@ export function MobileDrawer() {
               title={"Blog"}
               href={paths.blog.index}
             />
+            <MobileRouteItem
+              title={"Workshops"}
+              href={paths.workshops}
+            />
             <div className="mt-3 h-[60px]"></div>
           </div>
         </div>
