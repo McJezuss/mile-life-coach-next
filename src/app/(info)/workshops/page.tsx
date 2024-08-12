@@ -123,7 +123,7 @@ export default function Workshops() {
 
           <Separator />
 
-          <ul className="text-left space-y-2 list-disc">
+          <ul className="text-left space-y-2 list-disc mx-3">
             <li className="pl-3 font-fraunces">
               <Typography>
                 Are you feeling overwhelmed by the business of everyday life?
@@ -171,7 +171,7 @@ export default function Workshops() {
             <Typography variant="h3">
               Morning Session: Understanding Trauma, Emotions & Triggers
             </Typography>
-            <ul className="text-left space-y-2 list-disc">
+            <ul className="text-left space-y-2 list-disc mx-3">
               <li className="pl-3 font-fraunces">
                 <Typography>
                   Grasp what trauma is and its impact on the brain, body, and
@@ -206,7 +206,7 @@ export default function Workshops() {
             <Typography variant="h3">
               Afternoon Session: Life Coaching for Growth
             </Typography>
-            <ul className="text-left space-y-2 list-disc">
+            <ul className="text-left space-y-2 list-disc mx-3">
               <li className="pl-3 font-fraunces">
                 <Typography>
                   Understand the importance of growth and resilience.
@@ -244,7 +244,7 @@ export default function Workshops() {
           <div className="flex flex-col space-y-3">
             <Typography variant="h3">Reserve Your Spot Today!</Typography>
 
-            <ul className="text-left space-y-2 list-disc">
+            <ul className="text-left space-y-2 list-disc mx-3">
               <li className="pl-3 font-fraunces">
                 <Typography>
                   Spaces are limited to ensure a personalized experience for
@@ -277,7 +277,7 @@ export default function Workshops() {
                 For questions or more information, please contact us at:
               </Typography>
             </div>
-            <ul className="text-left space-y-2 list-disc">
+            <ul className="text-left space-y-2 list-disc mx-3">
               <li className="pl-3 font-fraunces">
                 <Typography>
                   <a
